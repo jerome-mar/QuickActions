@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA396A32C93E37900F823AB /* QuickActionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA396A22C93E37900F823AB /* QuickActionsManager.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-QuickActions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-QuickActions.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA396A12C93E35F00F823AB /* QuickActionsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickActionsManager.h; sourceTree = "<group>"; };
+		0AA396A22C93E37900F823AB /* QuickActionsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickActionsManager.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* QuickActions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickActions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = QuickActions/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = QuickActions/AppDelegate.mm; sourceTree = "<group>"; };
@@ -46,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA3969A2C92FD4D00F823AB /* QuickActionsManager */ = {
+			isa = PBXGroup;
+			children = (
+				0AA396A12C93E35F00F823AB /* QuickActionsManager.h */,
+				0AA396A22C93E37900F823AB /* QuickActionsManager.m */,
+			);
+			path = QuickActionsManager;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* QuickActions */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0AA3969A2C92FD4D00F823AB /* QuickActionsManager */,
 				13B07FAE1A68108700A75B9A /* QuickActions */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -144,7 +157,7 @@
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
@@ -259,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA396A32C93E37900F823AB /* QuickActionsManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -288,6 +302,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = QuickActions;
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickActions-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -314,6 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = QuickActions;
+				SWIFT_OBJC_BRIDGING_HEADER = "QuickActions-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -392,10 +408,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -468,10 +481,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
